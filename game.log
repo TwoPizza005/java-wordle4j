@@ -69,3 +69,5 @@ java.io.FileNotFoundException: words.txt (Не удается найти ука�
 	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
 	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
 	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: флора

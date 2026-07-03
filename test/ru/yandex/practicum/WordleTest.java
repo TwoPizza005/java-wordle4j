@@ -12,9 +12,7 @@ class WordleTest {
     @Test
     void testGenerateFeedback() {
         assertEquals("+++++", WordleDictionary.generateFeedback("книга", "книга"));
-        // Все буквы присутствуют, но не на своих местах
         assertEquals("^^^^^", WordleDictionary.generateFeedback("акниг", "книга"));
-        // Для "нкниг" – две 'н', одна в ответе, поэтому только первая '^', вторая '-'
         assertEquals("^^-^^", WordleDictionary.generateFeedback("нкниг", "книга"));
     }
 
@@ -32,24 +30,14 @@ class WordleTest {
     }
 
     @Test
-    void testWrongGuess() throws Exception {
-
-        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "абвгд"));
-        WordleGame testGame = new WordleGame(dict);
-
-    }
-
-    // Исправленный тест с использованием рефлексии (для демонстрации)
-    @Test
     void testWrongGuessFixed() throws Exception {
-        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "абвгд"));
+        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "слово"));
         WordleGame game = new WordleGame(dict);
-        // Устанавливаем ответ "книга" через рефлексию
         java.lang.reflect.Field field = WordleGame.class.getDeclaredField("answer");
         field.setAccessible(true);
         field.set(game, "книга");
 
-        String feedback = game.makeGuess("абвгд");
+        String feedback = game.makeGuess("слово");
         assertEquals("-----", feedback);
         assertFalse(game.isGameOver());
         assertEquals(5, game.getSteps());
@@ -57,14 +45,14 @@ class WordleTest {
 
     @Test
     void testGameOverAfterSixAttempts() throws Exception {
-        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "абвгд"));
+        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "слово"));
         WordleGame game = new WordleGame(dict);
         java.lang.reflect.Field field = WordleGame.class.getDeclaredField("answer");
         field.setAccessible(true);
         field.set(game, "книга");
 
         for (int i = 0; i < 6; i++) {
-            game.makeGuess("абвгд");
+            game.makeGuess("слово");
         }
         assertTrue(game.isGameOver());
         assertFalse(game.isWon());
@@ -73,16 +61,17 @@ class WordleTest {
 
     @Test
     void testHint() throws Exception {
-        WordleDictionary dict = new WordleDictionary(Arrays.asList("абвгд", "книга", "слово"));
+        WordleDictionary dict = new WordleDictionary(Arrays.asList("книга", "слово", "абвгд"));
         WordleGame game = new WordleGame(dict);
         java.lang.reflect.Field field = WordleGame.class.getDeclaredField("answer");
         field.setAccessible(true);
         field.set(game, "книга");
 
+        String feedback = game.makeGuess("слово");
+        assertEquals("-----", feedback);
 
-        game.makeGuess("абвгд");
         String hint = game.getHint();
-        assertEquals("слово", hint);
+        assertEquals("книга", hint);
     }
 
     @Test
