@@ -18,7 +18,7 @@ public class WordleDictionaryLoader {
             String line;
             while ((line = reader.readLine()) != null) {
                 String word = normalize(line.trim());
-                if (word.length() == 5 ) {
+                if (word.length() == 5) {
                     words.add(word);
                 }
             }
