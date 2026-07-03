@@ -1,8 +1,6 @@
 package ru.yandex.practicum;
 
-import ru.yandex.practicum.exceptions.InvalidWordLengthException;
-import ru.yandex.practicum.exceptions.WordNotFoundInDictionaryException;
-import ru.yandex.practicum.exceptions.WordleException;
+import ru.yandex.practicum.exceptions.*;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -42,7 +40,7 @@ public class Wordle {
         try {
             dictionary = WordleDictionaryLoader.load(DICTIONARY_FILE);
             log.println("Словарь загружен. Количество слов: " + dictionary.getWords().size());
-        } catch (IOException e) {
+        } catch (EmptyDictionaryException | IOException e) {
             log.println("Ошибка загрузки словаря: " + e.getMessage());
             e.printStackTrace(log);
             log.flush();
@@ -54,7 +52,7 @@ public class Wordle {
         log.flush();
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println(" Начинаем игру Wordle!");
+        System.out.println("Добро пожаловать в игру Wordle!");
         System.out.println("Угадайте слово из 5 букв. У вас 6 попыток.");
         System.out.println("Введите слово или нажмите Enter для подсказки.");
 
@@ -66,7 +64,7 @@ public class Wordle {
             if (input.isEmpty()) {
                 String hint = game.getHint();
                 if (hint == null) {
-                    System.out.println("Подсказок нет ");
+                    System.out.println("Подсказок нет (возможно, ошибка в предыдущих ходах).");
                 } else {
                     System.out.println("Подсказка: " + hint);
                 }
@@ -75,6 +73,11 @@ public class Wordle {
 
             if (input.length() != 5) {
                 System.out.println("Слово должно быть длиной ровно 5 букв.");
+                continue;
+            }
+
+            if (!input.matches("[а-я]+")) {
+                System.out.println("Используйте только русские буквы.");
                 continue;
             }
 
