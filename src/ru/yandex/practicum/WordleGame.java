@@ -1,7 +1,6 @@
 package ru.yandex.practicum;
 
-import ru.yandex.practicum.exceptions.WordNotFoundInDictionaryException;
-import ru.yandex.practicum.exceptions.InvalidWordLengthException;
+import ru.yandex.practicum.exceptions.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.Random;
 
 public class WordleGame {
 
-    private String answer;
+    private final String answer;
     private int steps;
     private final WordleDictionary dictionary;
 
@@ -18,8 +17,12 @@ public class WordleGame {
     private final List<GameHistoryEntry> history;
 
     public WordleGame(WordleDictionary dictionary) {
+        this(dictionary, dictionary.getRandomWord());
+    }
+
+    public WordleGame(WordleDictionary dictionary, String answer) {
         this.dictionary = dictionary;
-        this.answer = dictionary.getRandomWord();
+        this.answer = answer;
         this.steps = 6;
         this.gameOver = false;
         this.won = false;
@@ -46,9 +49,11 @@ public class WordleGame {
         return new ArrayList<>(history);
     }
 
-    public String makeGuess(String guess) throws WordNotFoundInDictionaryException, InvalidWordLengthException {
+    public String makeGuess(String guess) throws WordNotFoundInDictionaryException,
+            InvalidWordLengthException,
+            GameAlreadyFinishedException {
         if (gameOver) {
-            throw new IllegalStateException("Игра уже завершена.");
+            throw new GameAlreadyFinishedException("Игра уже завершена. Начните новую игру.");
         }
 
         if (guess.length() != 5) {

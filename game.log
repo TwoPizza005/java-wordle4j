@@ -71,3 +71,29 @@ java.io.FileNotFoundException: words.txt (Не удается найти ука�
 	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
 Словарь загружен. Количество слов: 4159
 Новая игра. Загадано слово: флора
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: марка
+Ошибка загрузки словаря: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Критическая ошибка: java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: сталь
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: кросс

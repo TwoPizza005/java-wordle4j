@@ -23,9 +23,9 @@ public class Wordle {
 
         try {
             runGame();
-        } catch (Throwable t) {
-            log.println("Критическая ошибка: " + t.toString());
-            t.printStackTrace(log);
+        } catch (Exception e) {
+            log.println("Критическая ошибка: " + e.toString());
+            e.printStackTrace(log);
             log.flush();
             System.err.println("Произошла ошибка. Подробности записаны в лог. Завершение.");
         } finally {
@@ -102,8 +102,10 @@ public class Wordle {
                 System.out.println("Такого слова нет в словаре. Попробуйте другое.");
                 log.println("Ошибка: " + e.getMessage());
                 log.flush();
-            } catch (InvalidWordLengthException e) {
+            } catch (InvalidWordLengthException | GameAlreadyFinishedException e) {
                 System.out.println(e.getMessage());
+                log.println("Ошибка: " + e.getMessage());
+                log.flush();
             }
         }
 
