@@ -1,0 +1,99 @@
+Ошибка загрузки словаря: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:44)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:28)
+Критическая ошибка: java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:44)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:28)
+Ошибка загрузки словаря: words\words.txt (Системе не удается найти указанный путь)
+java.io.FileNotFoundException: words\words.txt (Системе не удается найти указанный путь)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:43)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:27)
+Критическая ошибка: java.io.FileNotFoundException: words\words.txt (Системе не удается найти указанный путь)
+java.io.FileNotFoundException: words\words.txt (Системе не удается найти указанный путь)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:43)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:27)
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: весло
+Ошибка: Слово "рппрп" не найдено в словаре.
+Ход: армия -> -----
+Ход: дупло -> ---++
+Ход: пекло -> -+-++
+Ход: седло -> ^+-++
+Ход: весло -> +++++
+Игра завершена. Ответ: весло
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: панье
+Ошибка загрузки словаря: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Критическая ошибка: java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: флора
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: марка
+Ошибка загрузки словаря: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Критическая ошибка: java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+java.io.FileNotFoundException: words.txt (Не удается найти указанный файл)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:213)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:152)
+	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.base/java.io.FileReader.<init>(FileReader.java:103)
+	at ru.yandex.practicum.WordleDictionaryLoader.load(WordleDictionaryLoader.java:16)
+	at ru.yandex.practicum.Wordle.runGame(Wordle.java:41)
+	at ru.yandex.practicum.Wordle.main(Wordle.java:25)
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: сталь
+Словарь загружен. Количество слов: 4159
+Новая игра. Загадано слово: кросс
